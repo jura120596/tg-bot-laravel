@@ -4,9 +4,9 @@
 namespace App\Http\Controllers\Bot;
 
 
-use Yumir\TgBotLaravel\BaseBotContoller;
+use Yumir\TgBotLaravel\Controllers\BaseBotController;
 
-class BotController extends BaseBotContoller
+class BotController extends BaseBotController
 {
 
 }

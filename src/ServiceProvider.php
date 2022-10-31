@@ -7,6 +7,7 @@ namespace Yumir\TgBotLaravel;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Route;
 use TgBotApi\BotApiBase\BotApiNormalizer;
+use App\Bot\Handler;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -47,7 +48,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__ . '/requests/BotCallbackRequest.php' => app_path('Http/Requests/Bot/BotCallbackRequest.php')
         ], 'requests');
         $this->publishes([
-            __DIR__ . '/controllers/BotController.php' => app_path('Http/Controllers/Bot/BotCallbackRequest.php')
+            __DIR__ . '/controllers/BotController.php' => app_path('Http/Controllers/Bot/BotController.php')
         ], 'controllers');
+        $this->publishes([
+            __DIR__ . '/Handler.php' => app_path('Bot/Handler.php')
+        ], 'handler');
     }
 }
