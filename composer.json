@@ -1,0 +1,30 @@
+{
+    "name": "yumir/tg-bot-laravel",
+    "description": "Laravel tg integration library based on tg-bot-api/bot-api-base",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yumir\\TgBotLaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "YuriyMironov",
+            "email": "jura120596@gmail.com"
+        }
+    ],
+    "require": {
+        "tg-bot-api/bot-api-base": "^1.8",
+        "anlutro/l4-settings": "^0.7"
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "TgBot": "Yumir\\TgBotLaravel\\Facade"
+            },
+            "providers": [
+                "Yumir\\TgBotLaravel\\TgBotProvider"
+            ]
+        }
+    }
+}
