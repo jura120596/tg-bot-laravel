@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Bot;
 
 use App\TgBot\Commands\Handler;
-use Yumir\TgBotLaravel\BaseBotCallbackRequest;
+use Yumir\TgBotLaravel\Requests\BaseBotCallbackRequest;
 
 /**
  * Class BotCallbackRequest

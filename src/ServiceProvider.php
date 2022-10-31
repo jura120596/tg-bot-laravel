@@ -51,7 +51,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__ . '/controllers/BotController.php' => app_path('Http/Controllers/Bot/BotController.php')
         ], 'controllers');
         $this->publishes([
-            __DIR__ . '/Handler.php' => app_path('Bot/Handler.php')
+            __DIR__ . '/Handler.php' => app_path('Bot/Handler.php'),
+            __DIR__ . '/StartCommand.php' => app_path('Bot/StartCommand.php'),
         ], 'handler');
     }
 }
