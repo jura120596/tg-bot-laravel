@@ -14,11 +14,8 @@
         }
     ],
     "require": {
-        "tg-bot-api/bot-api-base": "^1.8",
-        "anlutro/l4-settings": "0.7.3"
-    },
-    "require-dev": {
-        "anlutro/l4-settings": "0.7.3"
+        "tg-bot-api/bot-api-base": "^1.8"
+        "anlutro/l4-settings": "^0.7.3"
     },
     "extra": {
         "laravel": {
