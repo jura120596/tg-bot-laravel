@@ -24,18 +24,20 @@ Publish the config file and lib other files by running `php artisan vendor:publi
 
 Set your bot api settings in config/tgbot.php
 
+Change config/app.php
+
+Add alias
+````php
+        'TgBot' => Yumir\TgBotLaravel\TgBot::class,
+````
+
 ## Usage
-
-You can either access the setting store via its facade or inject it by type-hinting towards the abstract class `anlutro\LaravelSettings\SettingStore`.
-
-Call `Setting::save()` explicitly to save changes made.
-
-You could also use the `setting()` helper:
 
 ```php
 use \Facades\Yumir\TgBotLaravel\TgBot;
 
 TgBot::send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create(config('tgbot.dev_id'), 'Hello'));
+
 ```
 
 
