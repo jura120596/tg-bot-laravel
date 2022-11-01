@@ -18,7 +18,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        app()->singleton(Facade::class, function () {
+        app()->singleton(TgBot::class, function () {
             $botKey = config('tgbot.key');
             $client = new Client();
             $apiClient = new TgApiClient($client);

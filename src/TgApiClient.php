@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\TgBot;
+namespace Yumir\TgBotLaravel;
 
 
 use GuzzleHttp\Client;
