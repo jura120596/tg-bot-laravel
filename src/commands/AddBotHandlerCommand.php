@@ -41,13 +41,27 @@ class AddBotHandlerCommand extends Command
         if (!$name && !($name = $this->ask('Please enter trait class name. (blank for exit)'))) {
             return;
         }
+        $name = str_replace('Handler', '', $name);
+        $begin = strtolower(mb_substr($name, 0, 1));
+        $beginU = strtoupper($begin);
+        $end = mb_substr($name, 1);
+        $before = 'before' . $beginU. $end;
         $code = <<<PHP
 <?php
 namespace  App\Bot;
 
-
+/**
+* Trait
+ * @package App\Bot
+ * @mixin \Yumir\TgBotLaravel\BaseHandler
+ */
 trait $name {
+    public function $before() {
 
+    }
+    public function $begin$end() {
+
+    }
 }
 PHP;
         file_put_contents(app_path('Bot/'.$name.'.php'), $code);
