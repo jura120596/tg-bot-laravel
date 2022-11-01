@@ -37,7 +37,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         self::routes();
         $this->commands([
-            Yumir\TgBotLaravel\Commands\StartCommand::class
+            \Yumir\TgBotLaravel\Commands\StartCommand::class
         ]);
         $this->publishes($c = [
             __DIR__ . '/config/config.php' => config_path('tgbot.php')
