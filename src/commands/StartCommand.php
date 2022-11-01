@@ -1,5 +1,5 @@
 <?php
-namespace App\Console\Commands;
+namespace Yumir\TgBotLaravel\Commands;
 
 use Yumir\TgBotLaravel\TgBot;
 use Illuminate\Console\Command;
