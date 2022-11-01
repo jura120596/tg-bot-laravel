@@ -37,7 +37,7 @@ class AddBotHandlerCommand extends Command
      */
     public function handle()
     {
-        $name = $this->option('name');
+        $name = $this->argument('name');
         if (!$name & !($name = $this->ask('Please enter trait class name. (blank for exit)'))) {
             return;
         }
