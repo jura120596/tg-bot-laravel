@@ -44,7 +44,9 @@ class AddBotHandlerCommand extends Command
         $code = <<<PHP
 <?php
 namespace  App\Bot;
-public trait $name {
+
+
+trait $name {
 
 }
 PHP;
@@ -53,7 +55,7 @@ PHP;
         $code = file_get_contents($file);
         foreach ($lines = explode("\n", $code) as $i => $line) {
             if ($line === '{') {
-                $lines[$i] .= "\n\t use \App\Bot\\".$name.';';
+                $lines[$i] .= "\n\tuse ".$name.';';
                 break;
              }
         }
