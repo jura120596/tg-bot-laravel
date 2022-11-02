@@ -27,11 +27,19 @@ class BaseHandler implements HasAssocCallbackParams
         'Back',
     ];
     /** @var BotCallbackRequest */
-    private $req;
+    protected $req;
 
     public function __construct(BotCallbackRequest $req)
     {
         $this->req = $req;
+    }
+
+    /**
+     * @return BotCallbackRequest
+     */
+    public function getReq(): BotCallbackRequest
+    {
+        return $this->req;
     }
 
     private static function userCommands()
