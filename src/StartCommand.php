@@ -4,7 +4,7 @@
 namespace App\Bot;
 
 
-class StartCommand
+trait StartCommand
 {
     public function start() {
 

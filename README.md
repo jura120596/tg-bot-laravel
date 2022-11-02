@@ -1,7 +1,5 @@
 # Laravel TG bot starter
 
-[![License](https://poser.pugx.org/anlutro/l4-settings/license.svg)](http://opensource.org/licenses/MIT)
-
 Despite the package name, this package should work with Laravel > 5.2
 
 ## Installation - Laravel >= 5.2
@@ -34,7 +32,6 @@ Add alias
 ## Usage
 
 ```php
-use \Facades\Yumir\TgBotLaravel\TgBot;
 
 TgBot::send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create(config('tgbot.dev_id'), 'Hello'));
 
